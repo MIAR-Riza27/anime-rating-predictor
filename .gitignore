@@ -18,7 +18,7 @@ venv/
 
 # Data folders (optional, untuk file besar atau sementara)
 data/processed/
-data/raw/top_anime.json
+*.json
 
 # Model outputs & plots
 models/
