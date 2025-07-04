@@ -19,6 +19,7 @@ venv/
 # Data folders (optional, untuk file besar atau sementara)
 data/processed/
 *.json
+*.csv
 
 # Model outputs & plots
 models/
