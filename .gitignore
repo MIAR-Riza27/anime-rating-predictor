@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+env/
+ENV/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Data folders (optional, untuk file besar atau sementara)
+data/processed/
+data/raw/top_anime.json
+
+# Model outputs & plots
+models/
+outputs/
