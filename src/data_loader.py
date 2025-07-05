@@ -2,7 +2,7 @@ import requests
 from time import sleep
 from tqdm import tqdm
 
-def get_top_anime_all(limit=250, per_page=25):
+def get_top_anime(limit=250, per_page=25):
     """
     Fetch top anime data from Jikan API with pagination.
 

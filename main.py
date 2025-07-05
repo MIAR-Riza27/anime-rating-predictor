@@ -1,10 +1,10 @@
-from src.data_loader import get_top_anime_all
+from src.data_loader import get_top_anime
 import json
 import os
 
 if __name__ == "__main__":
     print("Fetching top anime data from Jikan API...")
-    data = get_top_anime_all(limit=250)
+    data = get_top_anime(limit=250)
 
     os.makedirs("data/raw", exist_ok=True)
 
