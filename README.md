@@ -11,6 +11,8 @@ A machine learning project to predict anime scores based on metadata like type, 
 ├── data/
 │   └── processed/
 │       └── clean_anime_full.csv   # Cleaned dataset
+│   └── raw/
+│       └── top_anime_all.json     # Raw dataset
 ├── models/
 │   └── best_random_forest_model.pkl   # Saved model
 ├── notebooks/
