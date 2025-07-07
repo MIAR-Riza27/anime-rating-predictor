@@ -17,10 +17,9 @@ venv/
 .vscode/
 
 # Data folders (optional, untuk file besar atau sementara)
-data/processed/
+data/raw/
 *.json
 *.csv
 
 # Model outputs & plots
-models/
 outputs/

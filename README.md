@@ -6,15 +6,25 @@ A machine learning project to predict anime scores based on metadata like type, 
 ---
 ## Project Structure
 ```bash
-├── data
-│ └── processed
-│ └── clean_anime_full.csv # Cleaned dataset
-├── notebooks
-│ ├── 01-eda.ipynb             # Exploratory Data Analysis
-│ └── 02-modeling.ipynb        # Feature engineering + Model training
-├── models
-│ └── [Optional: save model here]
+├── .venv/                     # Virtual environment
+├── .vscode/                   # VSCode config
+├── data/
+│   └── processed/
+│       └── clean_anime_full.csv   # Cleaned dataset
+├── models/
+│   └── best_random_forest_model.pkl   # Saved model
+├── notebooks/
+│   ├── 01-eda.ipynb           # Exploratory Data Analysis
+│   └── 02-modeling.ipynb      # Feature engineering + Model training
+├── src/
+│   ├── data_loader.py         # Dataset loading functions
+│   └── preprocessing.py       # Preprocessing utilities
+├── tests/                     # (Optional) Unit tests
+├── .gitignore
+├── LICENSE
+├── main.py                    # (Optional) Script for running full pipeline
 ├── README.md
+├── requirements.txt
 ```
 
 ---
