@@ -7,18 +7,29 @@ A machine learning project to predict anime scores based on metadata like type, 
 ## Project Structure
 ```bash
 ├── .venv/                     # Virtual environment
+│   └── ...
 ├── .vscode/                   # VSCode config
+│   └── ...
 ├── data/
+│   └── interim/                   # Intermediate dataset
+│       └── ...
 │   └── processed/
 │       └── clean_anime_full.csv   # Cleaned dataset
 │   └── raw/
 │       └── top_anime_all.json     # Raw dataset
 ├── models/
-│   └── best_random_forest_model.pkl   # Saved model
+│   └── final_model.pkl        # Saved model
 ├── notebooks/
-│   ├── 01-eda.ipynb           # Exploratory Data Analysis
-│   └── 02-modeling.ipynb      # Feature engineering + Model training
+│   ├── 01-eda.ipynb                      # Exploratory Data Analysis
+│   ├── 02-features_engineering.ipynb     # Feature engineering
+│   ├── 03-model_training.ipynb           # Model training
+│   ├── 04-no_leakage_model.ipynb         # Model evaluation for no leakage
+│   ├── 05-model_tuning.ipynb             # Hyperparameter tuning
+│   └── 06-cross_validation.ipynb         # Cross-validation
 ├── src/
+│   └── __pycache__/
+│      └── ...
+│   ├── data_loader.py
 │   ├── data_loader.py         # Dataset loading functions
 │   └── preprocessing.py       # Preprocessing utilities
 ├── tests/                     # (Optional) Unit tests
@@ -77,14 +88,19 @@ Validated with 5-fold cross-validation, achieving **R² ≈ 0.9807 ± 0.0026**
     ```
 
 3. Run the notebook:
-    - You can start with the exploratory analysis:
+    - You can run it sequentially:
         ```bash
         jupyter notebook notebooks/01-eda.ipynb
-        ```
 
-    - Then proceed to model training:
-        ```bash
-        jupyter notebook notebooks/02-modeling.ipynb
+        jupyter notebook notebooks/02-feature_engineering.ipynb
+
+        jupyter notebook notebooks/03-model_training.ipynb
+
+        jupyter notebook notebooks/04-no_leakage_model.ipynb
+
+        jupyter notebook notebooks/05-model_tuning.ipynb
+
+        jupyter notebook notebooks/06-cross_validation.ipynb
         ```
 
 ---
