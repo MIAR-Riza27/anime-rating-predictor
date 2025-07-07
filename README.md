@@ -98,3 +98,5 @@ Validated with 5-fold cross-validation, achieving **R² ≈ 0.9807 ± 0.0026**
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
 You are free to **use, modify, and distribute** this project for personal or commercial purposes, with **proper attribution**.
+
+---
