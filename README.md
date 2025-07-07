@@ -5,12 +5,13 @@ A machine learning project to predict anime scores based on metadata like type, 
 
 ---
 ## Project Structure
-```
+```bash
 ├── data
 │ └── processed
 │ └── clean_anime_full.csv # Cleaned dataset
 ├── notebooks
-│ └── predict_anime_scores.ipynb # Main notebook
+│ ├── 01-eda.ipynb             # Exploratory Data Analysis
+│ └── 02-modeling.ipynb        # Feature engineering + Model training
 ├── models
 │ └── [Optional: save model here]
 ├── README.md
@@ -33,13 +34,13 @@ This project aims to:
 
 | Model                     | MAE    | RMSE   | R²     |
 |--------------------------|--------|--------|--------|
-| Linear Regression        | ~0.42  | ~0.56  | ~0.75  |
-| Random Forest (leakage)  | ~0.12  | ~0.19  | ~0.98  |
-| Random Forest (no leak)  | ~0.26  | ~0.36  | ~0.93  |
+| Linear Regression        | 1.5734 | 2.1717 | 0.6375 |
+| Random Forest (leakage)  | 0.0549 | 0.1844 | 0.9974 |
+| Random Forest (no leak)  | 0.1120 | 0.5235 | 0.9789 |
 | Tuned RF + CV (no leak)  |   —    |   —    | **~0.9807 ± 0.0026** |
 
-Best model: Tuned Random Forest (without `scored_by`, Best until now)
-Validated with 5-fold cross-validation
+**Best model:** Tuned Random Forest (with `scored_by` removed)  
+Validated with 5-fold cross-validation, achieving **R² ≈ 0.9807 ± 0.0026**
 
 ---
 ## Preprocessing
@@ -64,9 +65,15 @@ Validated with 5-fold cross-validation
     ```
 
 3. Run the notebook:
-    ```bash
-    notebooks/predict_anime_scores.ipynb
-    ```
+    - You can start with the exploratory analysis:
+        ```bash
+        jupyter notebook notebooks/01-eda.ipynb
+        ```
+
+    - Then proceed to model training:
+        ```bash
+        jupyter notebook notebooks/02-modeling.ipynb
+        ```
 
 ---
 ## Notes
