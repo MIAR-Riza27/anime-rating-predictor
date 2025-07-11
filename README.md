@@ -88,18 +88,31 @@ Validated with 5-fold cross-validation, achieving **R² ≈ 0.9807 ± 0.0026**
     ```
 
 3. Run the notebook:
-    - You can run it sequentially:
+    ### Step-by-Step Instructions for Running the Notebooks
+    You can run the notebooks sequentially by following these steps:
+
+    * Run the `01-eda.ipynb` notebook for exploratory data analysis:
         ```bash
         jupyter notebook notebooks/01-eda.ipynb
-
+        ```
+    * Run the `02-feature_engineering.ipynb` notebook for feature engineering:
+        ```bash
         jupyter notebook notebooks/02-feature_engineering.ipynb
-
+        ```
+    * Run the `03-model_training.ipynb` notebook for model training:
+        ```bash
         jupyter notebook notebooks/03-model_training.ipynb
-
+        ```
+    * Run the `04-no_leakage_model.ipynb` notebook for model evaluation without leakage:
+        ```bash
         jupyter notebook notebooks/04-no_leakage_model.ipynb
-
+        ```
+    * Run the `05-model_tuning.ipynb` notebook for hyperparameter tuning:
+        ```bash
         jupyter notebook notebooks/05-model_tuning.ipynb
-
+        ```
+    * Run the `06-cross_validation.ipynb` notebook for cross-validation:
+        ```bash
         jupyter notebook notebooks/06-cross_validation.ipynb
         ```
 
